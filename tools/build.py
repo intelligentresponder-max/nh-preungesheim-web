@@ -38,6 +38,9 @@ def page(path, title, desc, body, current=None):
 <title>{html.escape(title)} – Nachbarschaftshilfe Preungesheim</title>
 <meta name="description" content="{html.escape(desc)}">
 <meta name="color-scheme" content="light dark">
+<link rel="preload" href="{pre}fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{pre}fonts/Fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23132A4E'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23B8901E'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="{pre}css/style.css">
 </head>
 <body>

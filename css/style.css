@@ -1,8 +1,9 @@
 /* Nachbarschaftshilfe Preungesheim – Gold-Blau, mobil zuerst, Dark Mode.
-   Schriften: Fraunces (Überschriften) und Atkinson Hyperlegible (Text) nur,
-   wenn lokal unter fonts/ abgelegt (siehe fonts/README.md); sonst System-Schrift. */
-@font-face{font-family:"Fraunces";src:local("Fraunces"),url("../fonts/Fraunces.woff2") format("woff2");font-display:swap}
-@font-face{font-family:"Atkinson Hyperlegible";src:local("Atkinson Hyperlegible"),url("../fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");font-display:swap}
+   Schriften: Fraunces (Überschriften) und Atkinson Hyperlegible (Text), lokal unter fonts/
+   (siehe fonts/README.md); als Rückfall dient die System-Schrift. */
+@font-face{font-family:"Fraunces";src:url("../fonts/Fraunces.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("../fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("../fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
 
 :root{
   --navy:#132A4E; --blue:#1F4E91; --gold:#B8901E; --bg:#F3F6FB;
