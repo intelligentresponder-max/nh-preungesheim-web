@@ -1,0 +1,56 @@
+/* Nachbarschaftshilfe Preungesheim – Gold-Blau, mobil zuerst, Dark Mode.
+   Schriften: Fraunces (Überschriften) und Atkinson Hyperlegible (Text) nur,
+   wenn lokal unter fonts/ abgelegt (siehe fonts/README.md); sonst System-Schrift. */
+@font-face{font-family:"Fraunces";src:local("Fraunces"),url("../fonts/Fraunces.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:local("Atkinson Hyperlegible"),url("../fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");font-display:swap}
+
+:root{
+  --navy:#132A4E; --blue:#1F4E91; --gold:#B8901E; --bg:#F3F6FB;
+  --text:#132A4E; --card:#FFFFFF; --line:#C9D3E3; --link:#1F4E91;
+  --btn-bg:#132A4E; --btn-text:#FFFFFF; --head-bg:#132A4E; --head-text:#FFFFFF;
+  --callout:#FFF8E1; --focus:#B8901E;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0D1830; --text:#E8EEF8; --card:#16294A; --line:#34507F; --link:#9CC2F5;
+    --btn-bg:#E0B84A; --btn-text:#0D1830; --head-bg:#091226; --head-text:#FFFFFF;
+    --callout:#2A2A1A; --gold:#E0B84A; --focus:#E0B84A;
+  }
+}
+*{box-sizing:border-box}
+html{font-size:112.5%} /* 18 px Basis: große Schrift */
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;line-height:1.25;color:var(--text)}
+h1{font-size:1.9rem;margin:1.2rem 0 .6rem} h2{font-size:1.4rem;margin:2rem 0 .5rem}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem}
+a{color:var(--link);text-underline-offset:.15em}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:.6rem 1rem;z-index:10}
+.skip:focus{left:0}
+.site-header{background:var(--head-bg);color:var(--head-text);border-bottom:4px solid var(--gold)}
+.site-header .wrap{padding-top:.8rem;padding-bottom:.8rem}
+.brand{color:var(--head-text);text-decoration:none;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.15rem;line-height:1.3;display:inline-block}
+.brand span{font-family:inherit;font-weight:400;font-size:.9rem;opacity:.9}
+nav ul{list-style:none;margin:.7rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+nav a{display:block;padding:.55rem .8rem;color:var(--head-text);text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:.4rem;min-height:44px}
+nav a:hover{background:rgba(255,255,255,.12)}
+nav a[aria-current="page"]{background:#fff;color:#132A4E;font-weight:700}
+main{padding-bottom:3rem}
+.lead{font-size:1.2rem}
+.small{font-size:.85rem;opacity:.9}
+.badge{display:inline-block;padding:.25rem .8rem;border:2px solid var(--gold);border-radius:2rem;font-weight:700}
+.buttons{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.2rem 0}
+.btn{display:inline-block;padding:.8rem 1.3rem;min-height:48px;border:2px solid var(--btn-bg);border-radius:.5rem;
+  color:var(--text);background:transparent;text-decoration:none;font-weight:700}
+.btn-primary{background:var(--btn-bg);color:var(--btn-text)}
+.btn:hover{filter:brightness(1.12)}
+.callout{background:var(--callout);border-left:6px solid var(--gold);padding:.1rem 1.2rem 1rem;margin:2rem 0;border-radius:.3rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.5rem;padding:.1rem 1.2rem 1rem;margin:1rem 0}
+.card h2{margin-top:.9rem;font-size:1.2rem}
+.sources li{margin:.3rem 0;overflow-wrap:anywhere}
+li{margin:.3rem 0}
+.site-footer{background:var(--head-bg);color:var(--head-text);padding:1.2rem 0;border-top:4px solid var(--gold)}
+.site-footer a{color:var(--head-text)}
+@media (min-width:40rem){h1{font-size:2.3rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
