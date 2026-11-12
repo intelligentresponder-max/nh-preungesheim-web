@@ -17,6 +17,30 @@
 - GitHub Pages in den Repo-Einstellungen aktivieren (Branch `main`, Ordner `/`).
 - Einwohnerzahl 15.770 (Ende 2024) mit Quelle der Stadt Frankfurt belegen.
 
+## 2026-11-12 – Geräte-Prüfung, lokale Schriften, Ladeverhalten
+Geprüft mit Chromium (390 px), hell und dunkel, alle 16 Seiten, plus Lighthouse 12 (mobil und Desktop). Das ist **noch keine** Prüfung auf einem echten Gerät.
+
+- Kein seitliches Scrollen, 0 Fremdaufrufe, 0 Fehlerantworten auf allen 16 Seiten in beiden Modi.
+- Schriften Fraunces und Atkinson liegen jetzt lokal unter `fonts/` (OFL, Lizenztexte beigelegt) und laden nachweislich.
+- Lighthouse nach den Änderungen: Leistung, Barrierefreiheit, Best Practices, SEO je 100; CLS 0.
+- Platzhalter `[NAME]` usw. stehen nur noch in Impressum, Datenschutz und Kontakt (bewusst).
+
+### Fehler und Korrekturen
+- **Layoutsprung (CLS 0,24) auf Blogseiten:** Die Schriften luden nach dem ersten Rendern (`font-display: swap`) und verschoben den Text. Behoben durch `preload` der beiden Hauptschriften in `tools/build.py`. **Regel:** Neue Webfonts immer mit `preload` und danach CLS messen.
+- **Konsolenfehler 404 auf `/favicon.ico`:** kein Favicon vorhanden (Lighthouse: Best Practices 96). Behoben durch ein eingebettetes SVG-Favicon (keine zusätzliche Anfrage).
+- **`local()` in `@font-face` entfernt:** Eine zufällig installierte Systemversion hätte die Darstellung je nach Gerät verändert und Fettdruck nur nachgebildet. Jetzt gibt es eine eigene Bold-Datei.
+- **Fraunces als variable Datei:** Ohne `font-weight: 100 900` in `@font-face` würde der Browser Gewichte nachbilden. Eingetragen.
+
+### Alternativen geprüft
+- Google Fonts per Link: verworfen (Fremdaufruf an Google, Abmahnrisiko DSGVO, widerspricht „keine Tracker“).
+- Fontsource-Pakete (npm) statt Download von Google: gewählt. Gleiche Dateien, OFL, versioniert, Quelle nachvollziehbar. Vor dem Einbinden die Lizenzdateien mitkopiert.
+- `font-display: optional` gegen den Sprung: verworfen, weil die Schrift beim ersten Besuch auf langsamen Geräten ganz fehlen könnte. `preload` bringt Schrift und Stabilität.
+- Sicherheit: Die Schriftdateien sind reine Binärdaten ohne Skript. Pakete wurden nur zum Kopieren der Dateien genutzt, nichts davon liegt im Repo außer den Dateien und Lizenzen.
+
+### Weiterhin offen
+- Test auf echtem Android-Gerät (Netzwerk-Tab, älteres Gerät).
+- Bei Seiten mit Texten in anderen Alphabeten Schriftteilsatz erweitern.
+
 ## 2026-11-12 – Quellenprüfung (Suchergebnisse, Volltext war gesperrt)
 Die Quellen selbst konnten nicht gelesen werden (Netzwerk der Session). Diese Funde stammen aus Suchtreffern und sind **nicht** im Volltext geprüft.
 
