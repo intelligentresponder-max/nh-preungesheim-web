@@ -144,6 +144,7 @@ page("fachkraft.html", "Fachkraft gesucht",
 
 <h2>Wofür brauchen wir Sie genau?</h2>
 <p>Für die Gründung des Vereins ist keine Fachkraft nötig. Wir brauchen Sie für die spätere Anerkennung als Angebot zur Unterstützung im Alltag (§ 45a SGB XI). Erst mit dieser Anerkennung können Pflegebedürftige die Hilfe über den Entlastungsbetrag bezahlen. Die Anforderungen im Einzelnen legt das Land Hessen fest. Das ist keine Rechtsberatung. Bitte prüfen Sie die Quellen unten.</p>
+<p class="notice"><strong>Noch nicht geprüft:</strong> Nach ersten Hinweisen zur hessischen Verordnung (PfluV) ist eine Fachkraft erst bei mehr als drei Helfenden vorgeschrieben, wenn die Leitung keine Fachkraft ist. Für reine Alltagsentlastung gilt diese Regel möglicherweise nicht. Wir haben das noch nicht im Wortlaut geprüft und klären es mit der zuständigen Stelle.</p>
 
 <div class="callout">
 <h2>Interesse?</h2>
@@ -174,7 +175,7 @@ page("mitmachen.html", "Mitmachen",
 <h2>Was Sie mitbringen sollten</h2>
 <ul>
 <li><strong>Einfaches Führungszeugnis.</strong> Es kostet 13 €. Eine Befreiung von der Gebühr ist möglich, wenn sie gleichzeitig beantragt wird. Das erweiterte Führungszeugnis ist bei der Hilfe für Ältere nicht nötig.</li>
-<li><strong>Basisqualifikation</strong> im Umfang von 30 Unterrichtseinheiten, auch online möglich, <strong>oder</strong> ein Erste-Hilfe-Kurs. Welche Variante gilt, klären wir mit Ihnen.</li>
+<li><strong>Basisqualifikation</strong> im Umfang von 30 Unterrichtseinheiten, auch online möglich, <strong>oder</strong> ein Erste-Hilfe-Kurs. Welche Variante gilt, klären wir mit Ihnen. Ein Erste-Hilfe-Kurs sollte nicht zu alt sein (in Hanau höchstens 3 Jahre). Ob das in Frankfurt auch gilt, ist noch nicht geprüft.</li>
 <li><strong>Schweigepflicht.</strong> Was Sie bei der Hilfe erfahren, bleibt privat.</li>
 </ul>
 <p class="small">Stand: {STAND}. Das ist keine Rechtsberatung. Die Voraussetzungen können sich ändern.</p>
@@ -367,6 +368,7 @@ post("entlastungsbetrag", "Was ist der Entlastungsbetrag?",
 <p>Ein Angebot muss bestimmte Bedingungen erfüllen und anerkannt werden. Dazu gehören zum Beispiel geschulte Helfende und eine fachliche Anleitung. Genau dafür suchen wir eine <a href="../fachkraft.html">Fachkraft</a>.</p>
 <h2>Wie viel darf Hilfe kosten?</h2>
 <p>Nach unseren Quellen gelten in Hessen Höchstsätze: bis zu 25 € pro Stunde für Alltagshilfe und bis zu 30 € pro Stunde für Betreuung. Bitte prüfen Sie die aktuellen Werte bei den Quellen, sie können sich ändern.</p>
+<p class="notice"><strong>Noch nicht geprüft:</strong> Die Höchstsätze von 25 € und 30 € haben wir noch nicht an der aktuellen hessischen Verordnung (PfluV) geprüft. In einer Fassung von 2022 fanden wir 30 € für bestimmte Angebotsarten. Bitte verlassen Sie sich noch nicht auf diese Zahlen.</p>
 <h2>Was gilt für uns?</h2>
 <p>Wir sind noch nicht anerkannt. Deshalb können wir den Entlastungsbetrag heute noch nicht nutzen. Handwerksarbeiten sind vom Entlastungsbetrag grundsätzlich ausgenommen. Die Anerkennung ist unser Ziel.</p>
 """, [("pih", "Fragen und Antworten für Anbieter"), ("ffm", "Anerkennung nach § 45a")])
@@ -400,6 +402,7 @@ post("forschung", "Was lernen wir aus der Forschung?",
 <li>Ältere Menschen bleiben beim Telefon. Der Erstkontakt per Telefon passt besser als Apps oder Online-Formulare.</li>
 <li>Die Gemeinschaft der Helfenden ist entscheidend. Wo Helfende sich verbunden fühlen, bleiben sie länger dabei.</li>
 </ul>
+<p class="notice"><strong>Noch nicht geprüft:</strong> Nach ersten Suchtreffern untersuchte IPot die Einführung einer digitalen Plattform in einer ländlichen Nachbarschaftshilfe. Wirksam war demnach die Kombination aus Plattform und persönlicher Vermittlung. Dass Ältere „beim Telefon bleiben“, haben wir im Bericht noch nicht belegt gefunden. Wir überarbeiten diesen Abschnitt, sobald wir den Bericht gelesen haben.</p>
 <h2>Das Projekt „NAH sein“</h2>
 <p>„NAH sein“ wird vom IWAK an der Goethe-Universität Frankfurt begleitet. Es beschäftigt sich mit Nachbarschaftshilfe. Genaue Ergebnisse haben wir hier nicht zusammengefasst. Bitte lesen Sie sie bei der Quelle nach.</p>
 <h2>Was wir daraus machen</h2>
